@@ -1,0 +1,28 @@
+.transcript-box {
+    background-color: #f9ffff;
+    border: 1px solid #cce7ff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-transcript {
+    color: #003366;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.6rem;
+    background-color: #e6f0ff;
+    border-radius: 6px;
+}
+
+.ai-response {
+    color: #004d00;
+    font-weight: 500;
+    background-color: #e6ffe6;
+    padding: 0.6rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    border-left: 4px solid #33cc33;
+}

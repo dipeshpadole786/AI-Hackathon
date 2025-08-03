@@ -1,0 +1,82 @@
+.app-header {
+    background-color: #e6f7ff;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #b3e0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.app-header h1 {
+    font-size: 1.6rem;
+    color: #0077cc;
+    margin: 0;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #004d80;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #004d80;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4d4f;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f0faff;
+        width: 100%;
+        padding: 1rem 2rem;
+        display: none;
+        border-top: 1px solid #cce7ff;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+}

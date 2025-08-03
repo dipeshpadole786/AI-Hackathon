@@ -1,0 +1,22 @@
+.mic-button {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.recording {
+    background: #e60000;
+}
+
+.transcript-box,
+.response-box,
+.map-box,
+.aid-box {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
+}
