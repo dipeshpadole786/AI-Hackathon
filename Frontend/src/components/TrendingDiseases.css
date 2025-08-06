@@ -1,0 +1,68 @@
+.trending-diseases {
+    padding: 2rem;
+    background: #f5f8ff;
+    border-radius: 10px;
+    border: 1px solid #dce1f2;
+    margin: 2rem auto;
+    max-width: 700px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 50, 0.03);
+}
+
+.trending-diseases h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.trending-diseases table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 16px;
+}
+
+.trending-diseases th,
+.trending-diseases td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.trending-diseases tr.high {
+    background-color: #ffe0e0;
+    color: #b10000;
+}
+
+.trending-diseases tr.moderate {
+    background-color: #fff8e1;
+    color: #d27c00;
+}
+
+.trending-diseases tr.low {
+    background-color: #e0ffe3;
+    color: #106b21;
+}
+
+@media (max-width: 600px) {
+
+    .trending-diseases table,
+    .trending-diseases thead,
+    .trending-diseases tbody,
+    .trending-diseases th,
+    .trending-diseases td,
+    .trending-diseases tr {
+        display: block;
+    }
+
+    .trending-diseases td {
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .trending-diseases td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+    }
+}

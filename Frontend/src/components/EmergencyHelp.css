@@ -1,0 +1,70 @@
+.geo-hospital {
+    padding: 2rem;
+    background-color: #f9f9ff;
+    border-radius: 10px;
+    border: 1px solid #dce1f2;
+    box-shadow: 0 4px 12px rgba(0, 0, 50, 0.05);
+    margin: 2rem auto;
+    max-width: 700px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.geo-hospital h2 {
+    font-size: 24px;
+    color: #0d6efd;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.geo-hospital ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.geo-hospital li {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #0d6efd;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.geo-hospital li:hover {
+    transform: scale(1.01);
+}
+
+.geo-hospital li strong {
+    font-size: 18px;
+    color: #333;
+}
+
+.geo-hospital li span {
+    display: block;
+    margin-top: 5px;
+    color: #555;
+    font-size: 15px;
+}
+
+.geo-hospital a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.geo-hospital a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .geo-hospital {
+        padding: 1rem;
+    }
+
+    .geo-hospital li {
+        padding: 1rem;
+    }
+}

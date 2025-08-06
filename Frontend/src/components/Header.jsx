@@ -16,11 +16,11 @@ const Header = () => {
             </button>
 
             <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-                <a href="#home" onClick={() => setMenuOpen(false)}>🏠 Home</a>
-                <a href="#trending" onClick={() => setMenuOpen(false)}>📊 Trending Diseases</a>
-                <a href="#assistant" onClick={() => setMenuOpen(false)}>🤖 AI Assistance</a>
-                <a href="#symptoms" onClick={() => setMenuOpen(false)}>🩺 Symptoms Checker</a>
-                <a href="#emergency" onClick={() => setMenuOpen(false)}>📞 Emergency Help</a>
+                <a href="/homepage" onClick={() => setMenuOpen(false)}>🏠 Home</a>
+                <a href="/trending" onClick={() => setMenuOpen(false)}>📊 Trending Diseases</a>
+                <a href="/home" onClick={() => setMenuOpen(false)}>🤖 AI Assistance</a>
+                <a href="cheaker" onClick={() => setMenuOpen(false)}>🩺 Symptoms Checker</a>
+                <a href="/emergency" onClick={() => setMenuOpen(false)}>📞 Emergency Help</a>
             </nav>
         </header>
     );

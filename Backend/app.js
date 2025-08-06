@@ -79,6 +79,76 @@ app.post("/send-email", async (req, res) => {
 });
 
 
+
+// Dummy database of symptom-condition pairs
+const conditionsDB = [
+    {
+        symptoms: ["fever", "cough", "fatigue"],
+        condition: "Flu or COVID-19",
+        severity: "Moderate",
+    },
+    {
+        symptoms: ["headache", "nausea"],
+        condition: "Migraine",
+        severity: "Low",
+    },
+    {
+        symptoms: ["chest pain", "shortness of breath"],
+        condition: "Possible Heart Issue",
+        severity: "High",
+    },
+    {
+        symptoms: ["sore throat", "runny nose"],
+        condition: "Common Cold",
+        severity: "Low",
+    },
+    {
+        symptoms: ["diarrhea", "vomiting", "abdominal pain"],
+        condition: "Food Poisoning",
+        severity: "Moderate",
+    },
+];
+
+// Route to check symptoms
+app.post("/check-symptoms", (req, res) => {
+    const { symptoms } = req.body;
+
+    if (!symptoms || symptoms.trim().length === 0) {
+        return res.status(400).json({ result: "Please enter symptoms." });
+    }
+
+    const input = symptoms.toLowerCase().split(/[\s,]+/); // split by spaces or commas
+    const matched = [];
+
+    for (const entry of conditionsDB) {
+        const matchCount = entry.symptoms.reduce((count, symptom) => {
+            return input.includes(symptom) ? count + 1 : count;
+        }, 0);
+
+        if (matchCount > 0) {
+            matched.push({
+                condition: entry.condition,
+                severity: entry.severity,
+                matchedSymptoms: matchCount,
+                totalSymptoms: entry.symptoms.length,
+            });
+        }
+    }
+
+    if (matched.length > 0) {
+        // Sort by most matched symptoms
+        matched.sort((a, b) => b.matchedSymptoms - a.matchedSymptoms);
+        return res.json({ result: matched });
+    } else {
+        return res.json({
+            result: "Condition not found. Please consult a doctor.",
+        });
+    }
+});
+
+
+
+
 app.listen(PORT, () => {
     console.log(`✅ Server running on http://localhost:${PORT}`);
 });

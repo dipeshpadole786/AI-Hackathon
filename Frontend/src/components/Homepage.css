@@ -1,0 +1,118 @@
+/* src/components/Homepage.css */
+
+.homepage-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px 40px;
+    /* Top padding reduced to fix gap below header */
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    min-height: calc(100vh - 80px);
+    /* Ensure it fits nicely below the header */
+    box-sizing: border-box;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.homepage-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.homepage-text h1 {
+    font-size: 3rem;
+    color: #00695c;
+    margin-bottom: 20px;
+}
+
+.homepage-text .brand {
+    color: #00897b;
+}
+
+.homepage-text p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    background-color: #00897b;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.explore-btn:hover {
+    background-color: #00695c;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.nav-buttons button {
+    background-color: #ffffff;
+    border: 2px solid #00897b;
+    color: #00897b;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #00897b;
+    color: white;
+}
+
+.slider-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.slider-image {
+    width: 100%;
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .homepage-container {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .homepage-text h1 {
+        font-size: 2.4rem;
+    }
+
+    .explore-btn,
+    .nav-buttons button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider-image {
+        max-width: 100%;
+        max-height: 300px;
+    }
+}
