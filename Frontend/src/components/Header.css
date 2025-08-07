@@ -3,11 +3,16 @@
     padding: 1rem 2rem;
     border-bottom: 2px solid #b3e0ff;
     display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+}
+
+.top-bar {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    font-family: 'Segoe UI', sans-serif;
+    width: 100%;
 }
 
 .logo-section {
@@ -34,6 +39,7 @@
     border: none;
     cursor: pointer;
     color: #004d80;
+    margin-left: auto;
 }
 
 .nav-links {
@@ -69,6 +75,7 @@
         padding: 1rem 2rem;
         display: none;
         border-top: 1px solid #cce7ff;
+        z-index: 1000;
     }
 
     .nav-links.open {

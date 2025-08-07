@@ -1,18 +1,29 @@
 .geo-hospital {
-    padding: 2rem;
-    background-color: #f9f9ff;
-    border-radius: 10px;
-    border: 1px solid #dce1f2;
-    box-shadow: 0 4px 12px rgba(0, 0, 50, 0.05);
-    margin: 2rem auto;
-    max-width: 700px;
-    font-family: 'Segoe UI', sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px 25px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .geo-hospital h2 {
+    text-align: center;
     font-size: 24px;
-    color: #0d6efd;
-    margin-bottom: 1.5rem;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+}
+
+.geo-hospital p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+.geo-hospital .error {
+    color: #d32f2f;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -23,48 +34,29 @@
 }
 
 .geo-hospital li {
-    background-color: #ffffff;
-    padding: 1rem 1.5rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #0d6efd;
+    background: white;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s;
 }
 
 .geo-hospital li:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
-.geo-hospital li strong {
+.geo-hospital strong {
     font-size: 18px;
     color: #333;
 }
 
-.geo-hospital li span {
-    display: block;
-    margin-top: 5px;
-    color: #555;
-    font-size: 15px;
-}
-
 .geo-hospital a {
-    color: #007bff;
+    color: #1976d2;
     text-decoration: none;
     font-weight: 500;
 }
 
 .geo-hospital a:hover {
     text-decoration: underline;
-}
-
-/* Mobile responsive */
-@media (max-width: 600px) {
-    .geo-hospital {
-        padding: 1rem;
-    }
-
-    .geo-hospital li {
-        padding: 1rem;
-    }
 }

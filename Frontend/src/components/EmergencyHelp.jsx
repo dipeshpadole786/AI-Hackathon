@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './EmergencyHelp.css';
 
 const NearbyHospitals = () => {
     const [location, setLocation] = useState(null);
@@ -9,7 +10,6 @@ const NearbyHospitals = () => {
     const GEOAPIFY_API_KEY = "67e9e7cd3dda49a9a0005c33aa19b1b8";
 
     useEffect(() => {
-        // Get current location
         if (!navigator.geolocation) {
             setError("Geolocation is not supported.");
             setLoading(false);
@@ -56,14 +56,21 @@ const NearbyHospitals = () => {
         <div className="geo-hospital">
             <h2>🏥 Nearby Hospitals</h2>
             {loading && <p>Loading hospitals near you...</p>}
-            {error && <p style={{ color: "red" }}>{error}</p>}
+            {error && <p className="error">{error}</p>}
             {hospitals.length > 0 && (
                 <ul>
                     {hospitals.map((h, i) => (
                         <li key={i}>
                             <strong>{h.name}</strong><br />
                             📍 {h.address}<br />
-                            📞 <a href={`tel:${h.phone}`}>{h.phone}</a>
+                            📞 <a href={`tel:${h.phone}`}>{h.phone}</a><br />
+                            🔗 <a
+                                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.name)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                See Location
+                            </a>
                         </li>
                     ))}
                 </ul>
